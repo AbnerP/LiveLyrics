@@ -1,4 +1,27 @@
 ﻿<Properties StartupConfiguration="{53A2EF3F-91EB-428F-BB89-82F088F3C5D2}|Default">
-  <MonoDevelop.Ide.ItemProperties.LiveLyricsAPI FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LiveLyricsAPI/Controllers/SpotifyAPI.cs">
+    <Files>
+      <File FileName="LiveLyricsAPI/Controllers/SpotifyAPI.cs" Line="12" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LiveLyricsAPI" expanded="True">
+            <Node name="LiveLyricsAPI" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="SpotifyAPI.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LiveLyricsAPI FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
