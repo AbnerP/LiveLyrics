@@ -1,0 +1,54 @@
+.container{
+  font-family: 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.songInfo{
+  position:fixed;
+  top: -10px;
+
+  background-color: white;
+
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.lyrics{
+  margin-top: 5%;
+}
+
+hr{
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 100%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+h1{
+  font-size: 1.4rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+h2{
+  color: grey;
+  font-size: 1.2rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+h3{
+  color: black;
+  font-size: 1rem;
+  line-height: .5rem;
+}
+
+
+
+
+
+
+
+

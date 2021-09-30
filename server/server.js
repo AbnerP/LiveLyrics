@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const SpotifyAPI = require('spotify-web-api-node');
 const Lyrics = require('song-lyrics-api');
 const e = require('express');
+const { urlencoded } = require('body-parser');
 const lyrics = new Lyrics();
 
 
@@ -15,6 +16,7 @@ const spotifyApi = new SpotifyAPI({
     clientSecret: '3b50dfbbbd3b4b83a30c484e0d516bc2',
 });
 
+authURL = 'https://accounts.spotify.com/authorize?client_id=a8f1e497744f4535b0a4b6430c20d0a9&redirect_uri=http://localhost:4200/&scope=streaming%20user-read-email%20user-read-private%20user-read-playback-state%20user-read-currently-playing'
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -33,6 +35,13 @@ app.post('/login',(req,res) =>{
         console.log(err);
         res.sendStatus(400)
     })
+});
+
+app.get('/ouathURL',(req,res)=>{
+  res.json({
+    url:authURL
+  });
+  return res;
 });
 
 app.get('/currentSong',(req,res) =>{
@@ -68,6 +77,7 @@ app.get('/currentSong',(req,res) =>{
   
   return res;
 });
+
 
 
 
