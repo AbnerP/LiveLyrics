@@ -54,7 +54,7 @@ app.get('/currentSong',(req,res) =>{
         lyrics.getLyrics(song)
           .then((response) => {
             for (var i = 0; i < response.length; i++) {
-              if(response[i]['title'] == song){
+              if(response[i]['title'] == song || response[i]['artist'] == artist){
                 console.log(response[i]);
                 l = response[i]['lyrics']['lyrics'];
                 lyr = l.split("\n");
