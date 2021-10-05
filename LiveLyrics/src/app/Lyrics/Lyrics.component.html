@@ -1,11 +1,20 @@
-<div class="container songInfo">
-  <h1>{{song}}</h1>
-  <h2>{{artist}}</h2>
+<div class="bar">
+  <div class="head">
+    <div class="songInfo">
+      <h1>{{song}}</h1>
+      <h2>{{artist}}</h2>
+    </div>
+
+  </div>
   <hr>
 </div>
-
 <div class="container lyrics">
   <h3 *ngFor="let l of lyrics">{{l}}</h3>
 </div>
 
 
+<div class="refreshBtn">
+      <button (click)="getCurrentSong()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>refresh</mat-icon>
+      </button>
+</div>

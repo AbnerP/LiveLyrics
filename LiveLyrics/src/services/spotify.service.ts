@@ -48,7 +48,7 @@ export class SpotifyService {
   getSongInformation(){
     axios.get(this.beURL+'/currentSong')
     .then(res => {
-      console.log(res.data.s);
+      console.log(res.data.i);
       this.song.next(res.data.s);
       this.artist.next(res.data.a);
       this.lyrics.next(res.data.l);

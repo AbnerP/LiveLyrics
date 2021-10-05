@@ -48,20 +48,24 @@ app.get('/currentSong',(req,res) =>{
   lyr = [];
   spotifyApi.getMyCurrentPlayingTrack()
       .then(function(data) {
-        song = data.body.item.name;
+        s = data.body.item.name;
         artist = data.body.item.artists[0].name;
-        
+        img = data.body.item.album.images[2].url;
+        song = s.split("(")[0];
+        console.log(song);
+        console.log(artist);
         lyrics.getLyrics(song)
           .then((response) => {
             for (var i = 0; i < response.length; i++) {
               if(response[i]['title'] == song || response[i]['artist'] == artist){
-                console.log(response[i]);
+                //console.log(response[i]);
                 l = response[i]['lyrics']['lyrics'];
                 lyr = l.split("\n");
                 res.json({
                   a:artist,
                   s:song,
-                  l:lyr
+                  l:lyr,
+                  i:img
                 })
               }
             }
@@ -69,7 +73,8 @@ app.get('/currentSong',(req,res) =>{
           .catch((error) => {
               return console.log(error);
           })
-        console.log(song+" by "+artist);
+          
+        //console.log(song+" by "+artist);
       }, function(err) {
         console.log('Something went wrong!', err);
       });

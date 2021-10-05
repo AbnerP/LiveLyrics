@@ -23,4 +23,14 @@ export class LyricsComponent implements OnInit {
     // console.log(this.spotifyService.currentAccessToken);
   }
 
+  getCurrentSong(){
+    this.song = "";
+    this.artist = "";
+    this.lyrics = [];
+    this.spotifyService.getSongInformation();
+    this.spotifyService.currentSong.subscribe(s => this.song = s);
+    this.spotifyService.currentArtist.subscribe(a => this.artist = a);
+    this.spotifyService.currentLyrics.subscribe(l => this.lyrics = l);
+  }
+
 }
